@@ -24,5 +24,8 @@ pipeline {
             junit 'results/*_result.xml'
             cleanWs()
         }
+        failure {  
+             echo 'Enviando mail.....'
+        }
     }
 }
