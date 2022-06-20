@@ -32,9 +32,8 @@ pipeline {
         }
         success {  
              echo 'This will run only if successful'  
-             echo "${env.JOB_NAME}"
-             echo "${env.BUILD_NUMBER}"
-             echo "${env.BUILD_URL}"
+             echo 'Nombre del trabajo:' + "${env.JOB_NAME}"
+             echo 'número de ejecución:' + "${env.BUILD_NUMBER}"
         }
     }
 }
