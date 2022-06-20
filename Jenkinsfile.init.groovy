@@ -9,7 +9,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Install!'
-                sh 'apt-get update && apt-get install make'
+                sh 'sudo apt-get update && apt-get install make'
                 echo 'Building stage!'
                 sh 'make build'
             }
