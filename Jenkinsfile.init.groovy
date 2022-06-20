@@ -25,7 +25,7 @@ pipeline {
             cleanWs()
         }
         failure {  
-            echo 'Enviando mail.....'             
+            echo 'Envio de notiifcación en caso de fallo'             
             echo  "<b>Se ha producido un error: </b><br>Project: ${env.JOB_NAME} <br>Build Number: ${env.BUILD_NUMBER}"
         }
         success {  
