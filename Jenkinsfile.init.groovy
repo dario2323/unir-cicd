@@ -9,7 +9,7 @@ pipeline {
         stage('Build') {
             steps {               
                 echo 'Building stage!'
-                sh 'make'
+                sh 'make build'
             }
         }
         stage('Unit tests') {
@@ -26,6 +26,9 @@ pipeline {
         }
         failure {  
              echo 'Enviando mail.....'
+        }
+        success {  
+             echo 'This will run only if successful'  
         }
     }
 }
