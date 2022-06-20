@@ -7,9 +7,7 @@ pipeline {
             }
         }
         stage('Build') {
-            steps {
-                echo 'Install!'
-                sh 'apt-get update && apt-get install make'
+            steps {               
                 echo 'Building stage!'
                 sh 'make build'
             }
