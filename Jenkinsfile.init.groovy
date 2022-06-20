@@ -34,6 +34,7 @@ pipeline {
              echo 'This will run only if successful'  
              echo 'Nombre del trabajo:' + "${env.JOB_NAME}"
              echo 'número de ejecución:' + "${env.BUILD_NUMBER}"
+             echo  "<b>Example</b><br>Project: ${env.JOB_NAME} <br>Build Number: ${env.BUILD_NUMBER}"
         }
     }
 }
