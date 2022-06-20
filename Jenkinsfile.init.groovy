@@ -9,7 +9,7 @@ pipeline {
         stage('Build') {
             steps {               
                 echo 'Building stage!'
-                sh 'make build'
+                sh 'make buildsss'
             }
         }
         stage('Unit tests') {
