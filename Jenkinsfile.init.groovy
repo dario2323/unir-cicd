@@ -25,14 +25,11 @@ pipeline {
             cleanWs()
         }
         failure {  
-             echo 'Enviando mail.....'             
-             echo "${env.JOB_NAME}"
-             echo "${env.BUILD_NUMBER}"
-             echo "${env.BUILD_URL}"
+            echo 'Enviando mail.....'             
+            echo  "<b>Se ha producido un error: </b><br>Project: ${env.JOB_NAME} <br>Build Number: ${env.BUILD_NUMBER}"
         }
         success {  
-             echo 'This will run only if successful'  
-             echo  "<b>Se ha producido un error: </b><br>Project: ${env.JOB_NAME} <br>Build Number: ${env.BUILD_NUMBER}"
+             echo 'This will run only if successful'               
         }
     }
 }
